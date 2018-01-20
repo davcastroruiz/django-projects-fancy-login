@@ -1,0 +1,12 @@
+{% extends 'main/main_base.html' %}
+
+{% block create_user %}
+    <div class="container-fluid">
+    <h4> Sign up a new user as Admin</h4>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Create user</button>
+    </form>
+    </div>
+{% endblock %}
